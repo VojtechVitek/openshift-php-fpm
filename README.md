@@ -1,14 +1,16 @@
+# TESTING PHP Cartridge without php/ directory
+It's possible to install Drupal from the upstream git repository:
+
+    rhc app-create $app https://cartreflect-claytondev.rhcloud.com/github/VojtechVitek/openshift-php-fpm?commit=without_php_dir mysql-5.1 --from-code=http://git.drupal.org/project/drupal.git
+
 # OpenShift PHP Cartridge
 
 The `php` cartridge provides [PHP](http://www.php.net) on OpenShift.
 
 ## Template Repository Layout
 
-    php/                   Externally exposed PHP code goes here
-    libs/                  Additional libraries
-    misc/                  For PHP code that should not be accessible by end users
-    deplist.txt            List of pears to install
     .openshift/            Location for OpenShift specific files
+      deplist.txt          List of pears to install
       action_hooks/        See the Action Hooks documentation [1]
       markers/             See the Markers section [2]
 
